@@ -156,7 +156,7 @@ O comando (3) retorna funcionários que supervisionam outros funcionários (indi
 |-|
 |SELECT Pnome, Unome<br>FROM FUNCIONARIO<br>WHERE (Cpf, 10) IN<br>&nbsp;&nbsp;&nbsp;&nbsp;( **SELECT Fcpf, Horas**<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**FROM TRABALHA_EM** )|
 
->Sim, a consulta (1) pode retornar tuplas iguais se houver entradas duplicadas na tabela TRABALHA_EM com o mesmo valor de Cpf e Horas.
+>Sim, a consulta (1) pode retornar tuplas iguais se houver entradas duplicadas na tabela TRABALHA_EM com o mesmo nome e último nome e Horas.
 
 <hr style="border:2px solid blue">
 
