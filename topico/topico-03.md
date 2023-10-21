@@ -58,7 +58,11 @@ Contradição para os requisitos de uma memória:
 - cada nível contêm uma cópia <ins>das **instruções** (código) e dos **dados**</ins> mais usados em cada instante; 
 - quanto mais "perto" a memória se encontra do processador, mais rápido será o acesso aos dados (<ins>maior o custo</ins> por byte, <ins>menor a capacidade</ins> de armazenamento).
 
-<img src="../media/memoria-hierarquia-1.jpg" width="400"><img src="../media/memoria-hierarquia-2.jpg" width="300">
+<p align="center">
+  <img src="../media/memoria-hierarquia-1.jpg" width="400">
+  <img src="../media/memoria-hierarquia-2.jpg" width="300">
+</p>
+
 
 Nas figuras acima:
 - os dados no armazenamento secundário ou terciário não podem ser processados diretamente pela CPU;
@@ -107,16 +111,28 @@ A maioria dos programas apresenta características de localidade, felizmente:
 #### <ins>PARA RESPONDER:<br>Analise as respostas às questões abaixo.</ins>
 
 <ins>(Questão 01)</ins> Que características um programa deve ter para que o uso de memória _cache_ seja muito vantajoso?
-- O programa deve ter trechos pequenos que sejam executados várias vezes, e os dados devem estar localizados próximos uns dos outros OU dados e instruções devem ter localidade espacial (próximos uns dos outros) e localidade temporal (serem usados várias vezes em um certo instante de tempo).
 
-> Um programa deve ter alta localidade espacial e temporal para que o uso de memória cache seja altamente vantajoso.
+```diff
++ O programa deve ter trechos pequenos que sejam executados várias vezes, e os dados devem estar localizados próximos uns dos outros OU dados e instruções devem ter localidade espacial (próximos uns dos outros) e localidade temporal (serem usados várias vezes em um certo instante de tempo). 
+```
+
+```diff
++ Um programa deve ter alta localidade espacial e temporal para que o uso de memória cache seja altamente vantajoso.
+```
 
 <ins>(Questão 02)</ins> Se registradores do processador e a memória _cache_ operassem com os mesmos tempos de acesso, ainda haveria vantagem em se utilizar a memória _cache_? E se a memória _cache_ e a memória principal operassem com os mesmos tempos de acesso, ainda haveria vantagem em se utilizar a memória _cache_? 
-- se os registradores do processador e a memória _cache_ têm o mesmo tempo de acesso , ainda assim seria vantajoso utilizar _cache_, porque o seu objetivo é justamente fornecer dados e instruções na velocidade do processador;
-- se a memória principal e a memória _cache_ operassem com os mesmos tempos, não haveria mais razão para se usar a memória _cache_;
-- obviamente, aspectos de custo e de confiabilidade devem ser considerados nessas respostas.
 
-> Se os registradores do processador e a memória cache operassem com os mesmos tempos de acesso, ainda haveria vantagem em se utilizar a memória cache, pois ela pode armazenar mais dados em comparação com os registradores. No entanto, se a memória cache e a memória principal operassem com os mesmos tempos de acesso, a vantagem de usar a memória cache seria muito reduzida, uma vez que o propósito principal da memória cache é reduzir a diferença de velocidade entre a CPU e a memória principal.
+
+```diff
++ - se os registradores do processador e a memória _cache_ têm o mesmo tempo de acesso , ainda assim seria vantajoso utilizar _cache_, porque o seu objetivo é justamente fornecer dados e instruções na velocidade do processador;
++ - se a memória principal e a memória _cache_ operassem com os mesmos tempos, não haveria mais razão para se usar a memória _cache_;
++ - obviamente, aspectos de custo e de confiabilidade devem ser considerados nessas respostas.
+
+```
+
+```diff
++ Se os registradores do processador e a memória cache operassem com os mesmos tempos de acesso, ainda haveria vantagem em se utilizar a memória cache, pois ela pode armazenar mais dados em comparação com os registradores. No entanto, se a memória cache e a memória principal operassem com os mesmos tempos de acesso, a vantagem de usar a memória cache seria muito reduzida, uma vez que o propósito principal da memória cache é reduzir a diferença de velocidade entre a CPU e a memória principal.
+```
 
 <ins>(Questão 03)</ins> [POSCOMP 2011] Ao medir o desempenho de um certo sistema, verificou-se que este passava muito tempo com a CPU ociosa e tinha um alto volume de acessos a disco. Assinale a alternativa que apresenta a solução traduzida na melhoria de desempenho desse sistema:<br>
 a) Troca da CPU por uma mais rápida<br>
