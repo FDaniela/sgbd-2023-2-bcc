@@ -140,13 +140,14 @@ O fator de bloco bfr é o número máximo de registros que podem ser armazenados
 
 bfr = (Tamanho do bloco) / (Tamanho do registro)
 = 512 / 113
-≈ 4.52 registros por bloco.
+≈ _4.52_
+= 4 registros por bloco.
 
 O número de blocos de arquivo b é o número total de registros dividido pelo fator de bloco:
 
 b = r / bfr
-  = 20000 / 4.52
-  ≈ 4424 blocos.
+  = 20000 / 4
+  = 5000 blocos.
 
 ```
 
@@ -154,13 +155,13 @@ b = r / bfr
 (c) Calcule o <ins>número médio de blocos acessados</ins> necessários para pesquisar um <ins>registro arbitrário</ins> no arquivo, usando <ins>busca linear</ins>.<br>
 
 ```diff
-Para a busca linear, o número médio de blocos acessados é aproximadamente metade do número total de blocos, ou seja, b/2 = 4424/2.
+Para a busca linear, o número médio de blocos acessados é aproximadamente metade do número total de blocos, ou seja, b/2 = 5000/2.
 ```
 
 (d) Suponha que o arquivo é <ins>ordenado pelo CPF</ins>, calcular o tempo que leva para procurar um registro a partir do valor de CPF, por meio de <ins>busca binária</ins>.
 
 ```diff
-Para a busca binária, o tempo de busca é aproximadamente log2(b), onde b é o número total de blocos. Portanto, o tempo de busca é aproximadamente log2(4424)
+Para a busca binária, o tempo de busca é aproximadamente log2(b), onde b é o número total de blocos. Portanto, o tempo de busca é aproximadamente log2(5000)=13
 ```
 
 
@@ -178,7 +179,7 @@ Seja o arquivo de clientes do exercício anterior. Contudo, suponha que apenas 8
 ```diff
  Para o cálculo do tamanho médio do registro, somamos todos os valores e adicionamos os bytes adicionais para separar os campos e marcar o fim do registro:
 
- Tamanho médio do registro = 30 + 9 + 40 + 7,2 + 8 + 1 + 3,4 + 0,6 + 4 + 2,7 + 1 + 1 + 1 = 108,9 bytes.
+ Tamanho médio do registro = (30 + 1) + (9 + 1) + (40 +1) + (9+1)*0,8 + (8+1) + (1+1) + (4+1)*0,85 + (4+1)*0,15 + (4+1) + (3+1)*0,9 1+1= 116,6 bytes.
 
 ```
 
@@ -187,16 +188,12 @@ Seja o arquivo de clientes do exercício anterior. Contudo, suponha que apenas 8
 ```diff
 Para calcular o número de blocos necessários para o arquivo, precisamos considerar o tamanho médio do registro e os outros elementos de cada bloco:
 
-O tamanho total de cada bloco é 512 bytes. Com o tamanho médio do registro em 108,9 bytes, podemos calcular o número médio de registros que um bloco pode armazenar:
+O tamanho total de cada bloco é 512 bytes. Considerando o ponteio tamanho será 507 bytes
 
-Número médio de registros por bloco = (Tamanho total do bloco) / (Tamanho médio do registro)
-                                    = 512 / 108,9 
-+                                    ≈ 4,7 registros por bloco.
+O arquivo ocupa: 116,6*20000 = 2332000 bytes
 
-Então, o número total de blocos necessários é o número total de registros dividido pelo número médio de registros por bloco:
-
-Número total de blocos = (Número total de registros) / (Número médio de registros por bloco) 
-+                       = 20000 / 4,7.
+Assim, b = ^233200/507^
+       b = 4600 bytes
 
 ```
 
