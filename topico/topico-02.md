@@ -14,29 +14,28 @@
   > - **Requisitos de Dados:** São os requisitos que descrevem como os dados devem ser armazenados, processados e acessados pelo software.
 
 3. **Independência Lógica e Independência Física:**
-  > - **Independência Lógica:** Significa que você pode mudar a estrutura dos dados sem afetar os programas.
-  > - **Independência Física:** Significa que você pode mudar onde e como os dados são armazenados sem afetar os programas.
+  > - **Independência Lógica:** Significa que você pode mudar a estrutura dos dados sem afetar os programas ou esquemas externos (visão do usuário).
+  > - **Independência Física:** Significa que você pode mudar onde e como os dados são armazenados sem afetar os programas ou esquemas externos (visão do usuário).
 
 4. **Dado e Metadado:**
-  > - **Dado:** São informações brutas ou fatos que podem ser armazenados e processados.
-  > - **Metadado:** É a informação sobre os dados, como uma descrição do que os dados representam.
+  > - **Dado:** São informações brutas ou fatos que podem ser armazenados e processados, ou seja, são as informações do mundo real a serem armazenadas no banco de dados.
+  > - **Metadado:** É a informação sobre os dados, como uma descrição do que os dados representam ,ou seja, são dados que descrevem outros dados. Eles podem descrever a estrutura, o formato e o significado dos dados.
 
 5. **Definição, Construção e Manipulação de Banco de Dados:**
-  > - **Definição de Banco de Dados:**
-   É uma coleção de dados relacionados.
-  > - **Construção de Banco de Dados:** É a criação real do banco de dados com tabelas e estruturas.
-  > - **Manipulação de Banco de Dados:** São operações como adicionar, buscar ou atualizar dados no banco.
+  > - **Definição de Banco de Dados:** É uma coleção de dados relacionados. || É o processo de estabelecer, por meio de metadados, a estrutura do banco de dados, incluindo restrições, tabelas, relacionamentos etc.
+  > - **Construção de Banco de Dados:** É a criação real do banco de dados com tabelas e estruturas. || É a carga inicial do banco de dados, isto é, a criação das tabelas com a primeira instância de dados.
+  > - **Manipulação de Banco de Dados:** São operações como adicionar, buscar ou atualizar dados no banco de dados. 
 
 6. **Banco de Dados e Sistema Gerenciador de Banco de Dados (SGBD):**
-  > - **Banco de Dados:** É onde as informações são armazenadas.
-  > - **SGBD:** É o software que ajuda a criar, acessar e gerenciar o banco de dados.
+  > - **Banco de Dados:** É onde as informações são armazenadas. || É um conjunto organizado de informações do mundo real associadas entre si, que são manipuláveis pelo sistema, mantidas durante um tempo e utilizadas para algum propósito específico 
+  > - **SGBD:** É o software que ajuda a criar, acessar e gerenciar o banco de dados. || É o software responsável por fornecer as ferramentas para gerenciar um banco de dados, incluindo a definição, criação e manipulação dos dados armazenados.
 
 7. **Tipo de Dado e Restrição de Integridade:**
   > - **Tipo de Dado:** É o formato dos dados, como números, palavras ou datas.
   > - **Restrição de Integridade:** São regras para garantir que os dados sejam precisos e consistentes.
 
 8. **Modelo de Dados e Esquema de Banco de Dados:**
-  > - **Modelo de Dados:** É uma maneira de para descrever a estrutura de um banco de dados, relacionamentos de dados, semântica de dados e restrições de consistência. 
+  > - **Modelo de Dados:** É uma maneira de descrever a estrutura de um banco de dados, relacionamentos de dados, semântica de dados e restrições de consistência. 
   > - **Esquema de Banco de Dados:** É a estrutura real do banco de dados, com tabelas, colunas e chaves, seguindo o modelo de dados escolhido.
 
 9. **Redundância e Redundância Controlada:**
@@ -71,15 +70,17 @@
 
 <hr style="border:2px solid blue">
 
-#### <ins>EXERCÍCIO:</ins> Que esquema conceitual de banco de dados, segundo o MER, pode ser empregado para suportar consultas por quaisquer parentes de determinada pessoa ?
+#### <ins>EXERCÍCIO:</ins> Que esquema conceitual de banco de dados, o MER, pode ser empregado para suportar consultas por quaisquer parentes de determinada pessoa ?
 
 > Pode-se utilizar um Modelo de Entidade-Relacionamento (MER) que inclua uma entidade "Pessoa" e uma relação "Parentesco". Para suportar consultas por quaisquer parentes de determinada pessoa em um esquema conceitual de banco de dados.
+Pessoa (Pai) <autorrelacionamento> Pessoa (Filho) |
+Pessoa (Mãe) <autorrelacionamento> Pessoa (Filho)
 
 <hr style="border:2px solid blue">
 
 #### <ins>EXERCÍCIO:</ins> Por que a <ins>ordenação de _tuplas_</ins> não é relevante no contexto do <ins>modelo relacional</ins> ?
 
-> A ordenação de tuplas não é relevante no modelo relacional porque o modelo trata os dados como conjuntos não ordenados, concentrando-se na integridade e na estrutura dos dados em vez da ordem em que eles estão armazenados. A ordem das tuplas só é determinada quando você faz uma consulta específica com uma cláusula de ordenação.
+> Uma tupla representa uma linha de uma tabela, isto é, uma instância de uma entidade. As relações, por sua vez, são formadas por um conjunto de tuplas, e, matematicamente falando, os elementos de um conjunto não possuem ordem entre eles. Além disso, o modelo relacional não se preocupa com o armazenamento físico dos dados (onde existe uma ordem de armazenamento na memória), apenas tenta representar os dados de forma lógica e abstrata.
 
 <hr style="border:2px solid blue">
 
@@ -88,7 +89,7 @@
 - Valor nulo e informação.
 
 > **Valor Nulo no Jargão de Banco de Dados:**
->- **Significado:** Em banco de dados, "valor nulo" representa a ausência de um valor válido em uma coluna.
+>- **Significado:** Em banco de dados, "valor nulo" representa a ausência de um valor válido em uma coluna, por diversas razões (não informado, não se aplica…).
 
 >**Semelhanças e Distinções entre Valor Nulo, Valor Ausente e Informação:**
 >1. **Valor Nulo e Valor Ausente:**
@@ -156,6 +157,6 @@
 - Se R(A1, A2, ...,An), então
 - r(R) ⊆ ( dom(A1) × dom(A2) × ... × dom(An) ) ?
 
->Em um modelo relacional de banco de dados, qualquer relação (tabela) é um subconjunto do produto cartesiano dos domínios dos seus atributos correspondentes.
+> Sim, pois o produto cartesiano dos conjuntos de domínios dos atributos é o conjunto de todas as combinações possíveis de valores que podem ser atribuídos a cada atributo. A relação contém apenas um subconjunto dessas combinações, ou seja, apenas as tuplas que realmente existem na relação.
 
 <hr style="border:2px solid blue">

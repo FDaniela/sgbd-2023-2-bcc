@@ -136,8 +136,10 @@ A maioria dos programas apresenta características de localidade, felizmente:
 
 <ins>(Questão 03)</ins> [POSCOMP 2011] Ao medir o desempenho de um certo sistema, verificou-se que este passava muito tempo com a CPU ociosa e tinha um alto volume de acessos a disco. Assinale a alternativa que apresenta a solução traduzida na melhoria de desempenho desse sistema:<br>
 a) Troca da CPU por uma mais rápida<br>
-b) Aumento na capacidade de memória do sistema<br>
-**c) Aumento na capacidade de armazenamento do disco<br>**
+**b) Aumento na capacidade de memória do sistema**<br>
+```diff
+- c) Aumento na capacidade de armazenamento do disco
+```
 d) Uso de memória _cache_<br>
 e) Troca do sistema operacional
 

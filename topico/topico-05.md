@@ -179,7 +179,11 @@ Seja o arquivo de clientes do exercício anterior. Contudo, suponha que apenas 8
 ```diff
  Para o cálculo do tamanho médio do registro, somamos todos os valores e adicionamos os bytes adicionais para separar os campos e marcar o fim do registro:
 
+<<<<<<< Updated upstream
  Tamanho médio do registro = (30 + 1) + (9 + 1) + (40 +1) + (9+1)*0,8 + (8+1) + (1+1) + (4+1)*0,85 + (4+1)*0,15 + (4+1) + (3+1)*0,9 1+1= 116,6 bytes.
+=======
+ Tamanho médio do registro = (30+1) + (9 + 1) + (40 + 1) + (9+1)*0,8 + (8+1) + (1+1) + (4+1)*0,85 + (4+1)*0,15 + (4+1) + (3+1)*0,9 + 1 + 1= 116,6 bytes.
+>>>>>>> Stashed changes
 
 ```
 
@@ -193,7 +197,11 @@ O tamanho total de cada bloco é 512 bytes. Considerando o ponteio tamanho será
 O arquivo ocupa: 116,6*20000 = 2332000 bytes
 
 Assim, b = ^233200/507^
+<<<<<<< Updated upstream
        b = 4600 bytes
+=======
++       b = 4600 bytes
+>>>>>>> Stashed changes
 
 ```
 

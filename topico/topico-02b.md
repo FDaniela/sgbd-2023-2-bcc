@@ -64,6 +64,14 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 >- RESULT1 contém todas as linhas de TRABALHA_DEPTO_5 e SUPERVISIONA_DEPTO_5, sem duplicatas.
 >- RESULT2 contém apenas as linhas presentes tanto em TRABALHA_DEPTO_5 quanto em SUPERVISIONA_DEPTO_5.
 >- RESULT3 contém todas as linhas de TRABALHA_DEPTO_5 que não estão em SUPERVISIONA_DEPTO_5.
+>-------------------------
+> “Todo supervisor é um funcionário, mas nem todo funcionário é um supervisor”<br>
+> FUNC_DEPTO_5: todos os funcionários do departamento 5<br>
+> TRABALHA_DEPTO_5: todos os CPFs dos funcionários do departamento 5<br>
+> SUPERVISIONA_DEPTO_5: todos os CPFs dos supervisores do departamento 5<br>
+> RESULT1: os CPFs de todos os funcionários do departamento 5<br>
+> RESULT2: os CPFs dos supervisores do departamento 5<br>
+> RESULT3: os CPFs dos funcionários do departamento 5 que não são supervisores<br>
 
 
 <hr style="border:2px solid blue">

@@ -29,7 +29,7 @@ ON F.Cpf = D.Fcpf;
 SELECT Fcpf AS Cpf, Nome_dependente, Sexo AS Sexo_dependente
 FROM DEPENDENTE;
 
-SELECT F.Pnome, F.Sexo, D.Nome_dependente, D.Sexo AS Sexo_dependente
+>SELECT F.Pnome, F.Sexo, D.Nome_dependente, D.Sexo AS Sexo_dependente
 FROM FUNCIONARIO F
 INNER JOIN D
 ON F.Cpf = D.Cpf;
@@ -43,11 +43,11 @@ ON F.Cpf = D.Cpf;
 SELECT Cpf_supervisor AS Cpf, Pnome, Unome
 FROM FUNCIONARIO;
 
-CREATE TABLE SUPER AS
+>CREATE TABLE SUPER AS
 SELECT Cpf, Pnome, Unome
 FROM FUNCIONARIO;
 
-SELECT FUNC.Cpf, FUNC.Pnome_func, FUNC.Unome_func, SUPER.Pnome, SUPER.Unome
+>SELECT FUNC.Cpf, FUNC.Pnome_func, FUNC.Unome_func, SUPER.Pnome, SUPER.Unome
 FROM FUNC
 INNER JOIN SUPER
 ON FUNC.Cpf = SUPER.Cpf;
