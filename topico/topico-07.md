@@ -13,7 +13,7 @@
 |6. Registro de tamanho variável|13. Organização de arquivos sequenciais|
 |7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. Organização de arquivos _hashing_|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 12. <ins>ORGANIZAÇÃO DE ARQUIVOS NÃO ORDENADOS (_HEAP_)</ins>
 
@@ -39,6 +39,8 @@ Se <ins>nenhum registro</ins> ou <ins>vários registros</ins> satisfizerem o pre
 &#x2714; o bloco é copiado para um _buffer_, caso o mesmo não esteja presente no _buffer pool_;<br>
 &#x2714; o registro é excluído do _buffer_;<br>
 &#x2714; o bloco é reescrito de volta no disco [quando oportuno].
+
+<span style="color: red;">
 
 **Como lidar com os espaços deixados pelos registros excluídos?**<br>
 &#x2618; O <ins>espaços não utilizados</ins> no bloco do disco podem ser <ins>reutilizados</ins>?
@@ -69,6 +71,8 @@ Se <ins>nenhum registro</ins> ou <ins>vários registros</ins> satisfizerem o pre
 &nbsp;&nbsp;&nbsp;&nbsp;&#x2618; nessa estratégia, é necessária uma <ins>marcação</ins> para os registros excluídos?
 
 <img src="../media/arquivo-09.jpg" width="300">
+
+</span>
 
 > As estratégias acima possuem implementação mais simples em arquivos de registros de tamanho fixo, quando se compara com arquivos de registros de tamanho variável.
 

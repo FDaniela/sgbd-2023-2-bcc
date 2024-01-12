@@ -13,7 +13,7 @@
 |6. Registro de tamanho variável|13. Organização de arquivos sequenciais (ordenados)|
 |7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. <ins>**ORGANIZAÇÃO DE ARQUIVOS _HASHING_ (3/4)**</ins>|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 14. <ins>ORGANIZAÇÃO DE ARQUIVOS _HASHING_ (3/4)</ins>
 
@@ -47,7 +47,7 @@ A figura ilustra a estrutura de _hashing_ extensível. Atenção ao texto presen
 
 <img src="../media/arquivo-18.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B;&#x26BE;&#x270D; <ins>_HASHING_ EXTENSÍVEL - EXEMPLO</ins>
 
@@ -82,7 +82,7 @@ Considere o exemplo abaixo:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; Inserir: <ins>João da Silva</ins>; Binário da função _hash_ = <ins>01011....</ins><br>
 &#9888; O diretório foi iniciado com **d=1**, ou seja, duas entradas (**2<sup>d</sup> = 2<sup>1</sup>**):<br>
@@ -128,7 +128,7 @@ Considere o exemplo abaixo:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; Inserir: <ins>Maria de Alencar</ins>; Binário da função _hash_ = <ins>10011...</ins><br>
 &#9888; Um _bucket_ no endereço C3C3C3C3C3 foi alocado.<br>
@@ -172,7 +172,7 @@ Considere o exemplo abaixo:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; Inserir: <ins>Ana de Paula</ins>; Binário da função _hash_ = <ins>10101...</ins><br>
 &#9888; Nenhum _bucket_ foi alocado.<br>
@@ -223,7 +223,7 @@ Considere o exemplo abaixo:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; Inserir: <ins>Pedro Soares</ins>; Binário da função _hash_ = <ins>11011...</ins><br>
 &#9888; O tamanho do diretório foi duplicado:<br>
@@ -286,7 +286,7 @@ Considere o exemplo abaixo:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; Inserir: <ins>Glória Barbosa</ins>; Binário da função _hash_ = <ins>00011...</ins><br>
 &#9888; Nenhum _bucket_ foi alocado.<br>
@@ -353,7 +353,7 @@ Considere o exemplo abaixo:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; Inserir: <ins>Ricardo Afonso</ins>; Binário da função _hash_ = <ins>10111...</ins><br>
 &#9888; O tamanho do diretório foi duplicado:<br>
@@ -480,7 +480,7 @@ Nenhum _bucket_ é <ins>alocado previamente</ins> para crescimento futuro:<br>
 O diretório é acessado antes de acessar um _bucket_ de dados:<br>
 &#x267B;  O tamanho máximo do diretório é **2<sup>k</sup>**, onde **k** é o número de bits do valor calculado pela **função _hash_**.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B;&#x26BE;&#x270D; <ins>TÉCNICA _HASHING_ DINÂMICO</ins>
 
@@ -491,7 +491,6 @@ Precursor da _Técnica Hashing Extensível_, porém difere do precursor pela est
 
 <img src="../media/arquivo-21.jpg" width="500">
 
-<hr style="border:2px solid blue">
 
 
 

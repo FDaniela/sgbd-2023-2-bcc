@@ -13,7 +13,7 @@
 |6. Registro de tamanho variável|13. Organização de arquivos sequenciais|
 |7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. Organização de arquivos _hashing_|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 10. <ins>ACESSO A REGISTROS</ins>
 
@@ -71,9 +71,11 @@ Outras operações, que podem ser <ins>aplicadas a múltiplos registros</ins>:<b
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9888; algumas organizações de arquivos exigem reorganização periódica:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#9888; por exemplo, reordenar os registros do arquivo, conforme um campo especificado.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 11. <ins>ORGANIZAÇÃO DE ARQUIVO _vs._ MÉTODO DE ACESSO</ins>
+
+<span style="color: red;">
 
 A <ins>organização de arquivo</ins>:
 - refere-se à organização dos dados de um arquivo em registros, blocos e estruturas de acesso;
@@ -84,6 +86,8 @@ O <ins>método de acesso</ins>:
 
 Os termos são mutuamente relacionados, pois é possível <ins>aplicar diversos métodos de acesso</ins> a um arquivo organizado em uma determinada organização:
 - há exceções, por exemplo, não podemos aplicar um método de acesso indexado a um arquivo que não possui índices.
+
+</span>
 
 > **A organização escolhida para um arquivo deve ser tal que <ins>traga eficiência às operações</ins> aplicadas ao arquivo, por meio de seus métodos de acesso.**
 
@@ -111,5 +115,3 @@ A <ins>escolha da organização de arquivo e dos métodos de acesso</ins> pode s
   - por exemplo, pesquisa de funcionários por CPF e pesquisa de funcionários por departamento;
   - ordenar fisicamentes os dados por _\<CPF\>_ ou por _\<departamento, nome do funcionário\>_?
   - em geral, a decisão (escolha) é tomada com base na importância esperada e na combinação de operações de recuperação e atualização.
-
-<hr style="border:2px solid blue">

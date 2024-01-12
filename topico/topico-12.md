@@ -13,7 +13,7 @@
 |6. Registro de tamanho variável|13. Organização de arquivos sequenciais (ordenados)|
 |7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. <ins>**ORGANIZAÇÃO DE ARQUIVOS _HASHING_ (4/4)**</ins>|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 14. <ins>ORGANIZAÇÃO DE ARQUIVOS _HASHING_ (4/4)</ins>
 <br>
@@ -78,7 +78,7 @@ Observar o conteúdo da figura abaixo:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-19.jpg" width="400">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B;&#x26BE;&#x270D; <ins>_HASHING_ LINEAR - EXEMPLO</ins>
 
@@ -92,7 +92,7 @@ Parâmetros:<br>
 &#x26BE; Função _hash_: **h<sub>j</sub> (K) = K mod (2<sup>j</sup> * M)** , para j = 0, 1, 2, ...<br>
 &#x26BE; Capacidade de _bucket_ = 02 registros.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; FASE 0 &#8212; n = 0
 
@@ -123,7 +123,7 @@ Na figura abaixo:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; FASE 0 &#8212; n = 1
 
@@ -198,7 +198,7 @@ O registro com valor 5 é inserido:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; FASE 0 &#8212; n = 2
 
@@ -268,7 +268,7 @@ O registro com valor 5 é inserido:<br>
     </tbody>
 </table>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x267B; Demais inserções de registros ...
 
@@ -280,7 +280,7 @@ O registro com valor 5 é inserido:<br>
 
 <img src="../media/arquivo-29.jpg" width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-30.jpg" width="300">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Em sintese ...
 

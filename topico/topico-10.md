@@ -13,7 +13,7 @@
 |6. Registro de tamanho variável|13. Organização de arquivos sequenciais (ordenados)|
 |7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. <ins>**ORGANIZAÇÃO DE ARQUIVOS _HASHING_ (2/4)**</ins>|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 14. <ins>ORGANIZAÇÃO DE ARQUIVOS _HASHING_ (2/4)</ins>
 <br>
@@ -128,6 +128,5 @@ Para lidar com o <ins>_hashing_ externo dinâmico</ins>:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26BE; uma sequência de bits, denominada **valor _hash_**;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26BE; os registros são distribuídos nos _buckets_, com base nos valores dos bits do **valor _hash_**.
 
-<hr style="border:2px solid blue">
 
 

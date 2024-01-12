@@ -1,4 +1,4 @@
-## [Tópico 05] - Estruturas de armazenamento (3/N)
+## [Tópico 05] - Estruturas de armazenamento (3/10)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 ### <ins>CONTEÚDO</ins>
@@ -13,7 +13,7 @@
 |6. Registro de tamanho variável|13. Organização de arquivos sequenciais|
 |7. <ins>**ORGANIZAÇÃO DE REGISTROS EM BLOCOS**</ins><br>**(espalhada e não espalhada)**|14. Organização de arquivos _hashing_|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 7. <ins>ORGANIZAÇÃO DE REGISTROS EM BLOCOS</ins>
 
@@ -58,14 +58,14 @@ A <ins>organização espalhada</ins> busca evitar o desperdício de espaço em c
 
 Para arquivos com <ins>registros de tamanho variável</ins>:
 - Pode ser usada uma organização espalhada ou não espalhada.
-  - se o tamanho médio do registro médio for grande, é vantajoso usar a organização espalhada, para reduzir o espaço perdido em cada bloco.
+  - se o tamanho médio do registro for grande, é vantajoso usar a organização espalhada, para reduzir o espaço perdido em cada bloco.
 - Cada bloco pode armazenar um <ins>número diferente de registros</ins>.
 - O <ins>fator de bloco</ins> (bfr) é o <ins>número médio de registros</ins> por bloco do arquivo.
 - O <ins>número de blocos</ins> **b** necessários para ter um arquivo com **r** registros:
   - **b = ⎡(r/bfr)⎤ blocos**
     - onde ⎡(x)⎤ representa a função _ceiling_ (retorna o menor valor inteiro maior ou igual a **x**).
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 8. <ins>CABEÇALHO DE ARQUIVO E CABEÇALHO DE BLOCO</ins>
 
@@ -83,19 +83,30 @@ O <ins>cabeçalho do bloco</ins> contém (ver figura abaixo):
 - <ins>Posição do final</ins> de espaço livre no bloco.
 - Matriz com a <ins>Posição inicial</ins> e o <ins>tamanho</ins> de cada registro.
 
+
 Os registros podem ser <ins>movimentados dentro de uma página</ins> para mantê-los contíguos:
 - A <ins>operação de exclusão</ins> causa a movimentação dos registros à esquerda do registro excluído.
 - A cada movimentação, a(s) entrada(s) no cabeçalho precisa(m) ser atualizada(s).
+
+<span style="color: red;">
+
 - O custo da movimentação é 'baixo', pois o bloco possui tamanho limitado.
 - Essa movimentação previne a fragmentação dentro do bloco.
 
+</span>
+
+<span style="color: red;">
+
 Qualquer <ins>ponteiro externo ao bloco</ins>:
 - <ins>Não deve apontar diretamente</ins> para qualquer dos registros no bloco.
-- <ins>Deve apontar para o cabeçalho do bloco</ins>, que contém a possição de cada registro no bloco. 
+
+</span>
+
+- <ins>Deve apontar para o cabeçalho do bloco</ins>, que contém a posição de cada registro no bloco. 
 
 <img src="../media/arquivo-06.jpg" width="600">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 9. <ins>ALOCAÇÃO DE BLOCOS DE ARQUIVO NO DISCO</ins>
 
@@ -118,7 +129,8 @@ Há diversas estratégias para alocar os blocos de um arquivo no disco.
 <ins>Alocação de blocos indexada</ins>:
 - Um ou mais blocos de índice contêm ponteiros para os blocos de arquivo reais.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
+
 
 ### Exercício
 
@@ -165,9 +177,6 @@ Para a busca binária, o tempo de busca é aproximadamente log2(b), onde b é o 
 ```
 
 
-
-[Uma solução](./topico-05solucao-01.md)
-
 <hr style="border:2px solid blue">
 
 ### Exercício
@@ -179,11 +188,7 @@ Seja o arquivo de clientes do exercício anterior. Contudo, suponha que apenas 8
 ```diff
  Para o cálculo do tamanho médio do registro, somamos todos os valores e adicionamos os bytes adicionais para separar os campos e marcar o fim do registro:
 
-<<<<<<< Updated upstream
  Tamanho médio do registro = (30 + 1) + (9 + 1) + (40 +1) + (9+1)*0,8 + (8+1) + (1+1) + (4+1)*0,85 + (4+1)*0,15 + (4+1) + (3+1)*0,9 1+1= 116,6 bytes.
-=======
- Tamanho médio do registro = (30+1) + (9 + 1) + (40 + 1) + (9+1)*0,8 + (8+1) + (1+1) + (4+1)*0,85 + (4+1)*0,15 + (4+1) + (3+1)*0,9 + 1 + 1= 116,6 bytes.
->>>>>>> Stashed changes
 
 ```
 
@@ -197,14 +202,6 @@ O tamanho total de cada bloco é 512 bytes. Considerando o ponteio tamanho será
 O arquivo ocupa: 116,6*20000 = 2332000 bytes
 
 Assim, b = ^233200/507^
-<<<<<<< Updated upstream
        b = 4600 bytes
-=======
-+       b = 4600 bytes
->>>>>>> Stashed changes
 
 ```
-
-[Uma solução](./topico-05solucao-02.md)
-
-<hr style="border:2px solid blue">

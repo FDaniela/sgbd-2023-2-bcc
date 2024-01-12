@@ -1,19 +1,19 @@
-## [Tópico 04] - Estruturas de armazenamento (2/N)
+## [Tópico 04] - Estruturas de armazenamento (2/10)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 ### <ins>CONTEÚDO</ins>
 
 |_Item do conteúdo_|_Item do conteúdo_|
 |-|-|
-|1. Visão geral|8. Cabeçalho do arquivo|
+|1. Visão geral|8. Cabeçalho do arquivo e cabeçalho de bloco|
 |2. Armazenamento físico|9. Alocação de blocos de arquivo no disco|
 |3. Arquivo, bloco e registro|10. Acesso a registros|
-|4. <ins>**_BUFFERING_ DE BLOCOS**</ins>|11. Armazenamento do dicionário de dados|
-|5. <ins>**REGISTRO DE TAMANHO FIXO**</ins>|12. Organização de arquivos _heap_|
+|4. <ins>**_BUFFERING_ DE BLOCOS**</ins>|11. Organização de arquivos _vs._ Método de acesso|
+|5. <ins>**REGISTRO DE TAMANHO FIXO**</ins>|12. Organização de arquivos não ordenados (_heap_)|
 |6. <ins>**REGISTRO DE TAMANHO VARIÁVEL**</ins>|13. Organização de arquivos sequenciais|
 |7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. Organização de arquivos _hashing_|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>RECAPTULANDO</ins> ...
 
@@ -24,7 +24,7 @@ Um **_buffer_** é uma área reservada <ins>contígua</ins> na memória principa
 Vários blocos contíguos, denominados **_cluster_**, podem ser transferidos como uma unidade:
 - Nesse caso, o tamanho do _buffer_ é ajustado para corresponder ao número de _bytes_ no _cluster_.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 4. <ins>_BUFFERING_ DE BLOCOS</ins>
 
@@ -38,40 +38,51 @@ Para lidar com a <ins>incompatibilidade de velocidades</ins> entre uma CPU e a m
 &nbsp;&nbsp;&nbsp;&nbsp;&#9728; enquanto um _buffer_ está sendo lido ou gravado pelo processador de E/S;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&#9728; a CPU pode processar dados em outro _buffer_;
 
-#### <ins>_DOUBLE BUFFERING_</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>_DOUBLE BUFFERING_</ins>
 
 A figura abaixo ilustra o emprego de **_buffer_ duplo** (_double buffering_):<br>
 &#9745; Dois _buffers_ - A e B - são utilizados para permitir leitura de dados e processamento de dados em paralelo;<br>
 &#9745; Observe que:<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o tempo necessário para <ins>processar um bloco em memória</ins><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;é menor que<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;o tempo necessário para <ins>ler o próximo bloco e preencher um _buffer_</ins>.
 
-<img src="../media/buffer-1.jpg" width="600">
+<img src="../media/buffer-01.jpg" width="600">
 
 Em síntese, ao empregar o **_double buffering_**:
 - A CPU pode começar a processar um bloco assim que sua transferência para a memória principal for concluída.
 - Ao mesmo tempo, o processador de E/S pode ler e transferir o próximo bloco para um _buffer_ diferente.
 
-#### <ins>EXECUÇÃO INTERCALADA _vs._ EXECUÇÃO PARALELA</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>EXECUÇÃO INTERCALADA _vs._ EXECUÇÃO PARALELA</ins>
 
 Quando <ins>uma única CPU</ins> controla vários processos, a execução paralela não é possível (ver figura a seguir): 
 - Na figura à esquerda, os processos A e B estão rodando concorrentemente de <ins>forma intercalada</ins>.
 - Na figura à direita, os processos C e D estão rodando concorrentemente de <ins>forma paralela</ins>.
 
-<img src="../media/buffer-2.jpg" width="400">
+<img src="../media/buffer-02.jpg" width="400">
 
 O benefícios do _buffering_ de blocos podem ser alcançados em ambos: processos executados concorrentemente de forma intercalada e de maneira paralela.
 
-#### <ins>GERENCIAMENTO DE _BUFFER_</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>GERENCIAMENTO DE _BUFFER_</ins>
 
 Uma reflexão: 
 - _Buffer_ - Área na memória principal para receber blocos (páginas) de dados da memória secundária.
+
+<span style="color: red;">
+
 - _Double buffering_ - Estratégia para a melhoria de eficência de execução:
   - execução da operação de E/S entre o memória secundária e a memória principal em uma área de _buffer_, concomitantemente com o processamento dos dados de outro _buffer_.
+
+</span>
+
 - Visto que o <ins>_buffer pool_ possui tamanho limitado</ins>:
   - o _buffer pool_ é compartilhado pelas transações das diversas aplicações, e seu tamanho é um parâmetro do próprio SGBD, que é especificado pelo DBA (o administrador do banco de dados).
   - então, como decidir <ins>que páginas (blocos) serão substituídas no _buffer pool_ (memória principal)</ins> para acomodar os blocos recém-solicitados?
 
-> O gerenciamento de _buffer_ busca:
->> (1) maximizar a probabilidade de que a página solicitada esteja na memória principal;<br>(2) no caso de leitura de um novo bloco na memória secundária, encontrar uma página para substituição que causará o menor dano, tal que a página substituída não seja usada brevemente (nas próximas operações).
+<span style="color: red;">
+
+ O gerenciamento de _buffer_ busca:
+
+ (1) maximizar a probabilidade de que a página solicitada esteja na memória principal;<br>(2) no caso de leitura de um novo bloco na memória secundária, encontrar uma página para substituição que causará o menor dano, tal que a página substituída não seja usada brevemente (nas próximas operações).
+
+</span>
 
 <ins>Para cada página</ins> presente no _buffer pool_, <ins>duas informações</ins> são usualmente empregadas na gerência de _buffer_:
 - **pin-count** - Para determinar <ins>se a página está fixada (_pinned_)</ins>:
@@ -82,6 +93,8 @@ Uma reflexão:
 - **dirty bit** - Para determinar <ins>se o conteúdo da página foi modificado</ins>:
   - inicialmente, o bit é definido como 0 (zero) para todas as páginas;
   - se o conteúdo da página foi modificado [por qualquer transação], o bit é então modificado para 1 (um).
+
+<span style="color: red;">
 
 Quando uma determinada página é solicitada, o gerenciador de _buffer_ verifica se a <ins>página solicitada</ins> já está em um _buffer_ no _buffer pool_:
 - Em caso positivo:
@@ -95,10 +108,12 @@ Quando uma determinada página é solicitada, o gerenciador de _buffer_ verifica
   4. aumenta sua contagem de pinos da página solicitada;
 - O endereço da memória principal da nova página é passado para o aplicativo solicitante.
 
+</span>
+
 > O que acontece se:<br>_(i)_ a página solicitada não estiver disponível no _buffer pool_; e<br>_(ii)_ não houver qualquer página não fixada disponível no _buffer pool_ ??
 >> A <ins>transação</ins> que solicitou a página pode entrar em <ins>estado de espera</ins>, ou ser <ins>abortada</ins>.
 
-#### <ins>POLÍTICAS DE SUBSTITUIÇÃO DE _BUFFER_</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>POLÍTICAS DE SUBSTITUIÇÃO DE _BUFFER_</ins>
 
 #### <ins>1. _Least Recently Used_ (LRU)</ins>
 
@@ -146,13 +161,13 @@ Em arquivos com <ins>registros de tamanho fixo</ins>:
 - <ins>todos os registros</ins> do arquivo são do <ins>mesmo tipo</ins>;
 - <ins>todos os registros</ins> do arquivo têm exatamente o <ins>mesmo tamanho (em bytes)</ins>.
 
-<img src="../media/arquivo-1.jpg" width="600">
+<img src="../media/arquivo-01.jpg" width="600">
 
 Na figura acima, os registros de EMPREGADO têm comprimento fixo: 71 bytes.<br>
 Cada registro tem os <ins>mesmos campos</ins> (a sequência de conteúdo para campos é a mesma para todos os registros) e os <ins>comprimentos dos campos são fixos</ins>, para que o sistema possa identificar a <ins>posição inicial do byte de cada campo</ins> em relação à posição inicial do registro:
 - tal facilita a localização de valores dos campos pelos programas que acessam o arquivo.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 6. <ins>REGISTRO DE TAMANHO VARIÁVEL</ins>
 
@@ -169,16 +184,16 @@ Um arquivo pode ter registros de comprimento variável por vários motivos:
   - registros relacionados de tipos diferentes são agrupados (colocados juntos) em blocos de disco;
   - por exemplo, o arquivo conteria registros dos tipos NOTA (notas obtidas pelos alunos) e ALUNO (os dados de cada aluno).
 
-#### <ins>CAMPO DE TAMANHO VARIÁVEL</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>CAMPO DE TAMANHO VARIÁVEL</ins>
 
 Em <ins>campos de comprimento variável</ins>, como cada registro possui um valor próprio para cada campo, o comprimento exato de alguns valores de campo pode variar. Duas alternativas para a representação de <ins>campo de tamanho variável</ins>, para <ins>determinar os bytes</ins> (conteúdo) de cada campo em um registro específico:
 - Usar <ins>caracter separador</ins> especial, para sinalizar o término do conteúdo do campo (ver figura abaixo);
   - o caractere especial não deveria pertencer ao domínio de qualquer dos campos do arquivo.
 - Armazenar o comprimento em bytes do campo no registro, precedendo o valor do campo.
 
-<img src="../media/arquivo-2.jpg" width="600">
+<img src="../media/arquivo-02.jpg" width="600">
 
-#### <ins>CAMPO OPCIONAL</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>CAMPO OPCIONAL</ins>
 
 Duas alternativas para a representação de <ins>registros com campos opcionais</ins>:
 - Usar um <ins>caractere especial</ins> que denota que <ins>o campo não possui valor (conteúdo)</ins> em um registro:
@@ -187,17 +202,16 @@ Duas alternativas para a representação de <ins>registros com campos opcionais<
   - um cenário para essa alternativa é: quando o número total de campos para o tipo de registro é grande, mas o número de campos que realmente aparecem em um registro típico é pequeno;
   - na figura abaixo, há três caracteres separadores.
 
-<img src="../media/arquivo-3.jpg" width="600">
+<img src="../media/arquivo-03.jpg" width="600">
 
-#### <ins>CAMPO COM VÁRIOS VALORES EM UM MESMO REGISTRO</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>CAMPO COM VÁRIOS VALORES EM UM MESMO REGISTRO</ins>
 
 Uma representação para <ins>campo com vários valores em um mesmo registro</ins>:
-- Usar um caractere especial para separar os valores repetidos do campo, e outro caractere especiam para indicar o término do campo:
+- Usar um caractere especial para separar os valores repetidos do campo, e outro caractere especial para indicar o término do campo:
   - ambos os caracteres especiais não deveriam pertencer ao domínio de qualquer dos campos do arquivo.
 
-#### <ins>ARQUIVO COM REGISTROS DE DIFERENTES TIPOS</ins>
+#### &#x267B;&#x26BE;&#x270D; <ins>ARQUIVO COM REGISTROS DE DIFERENTES TIPOS</ins>
 
 Uma representação para <ins>arquivo com registros de diferente tipos</ins>:
 - Usar um <ins>indicador de tipo de registro</ins>, precedendo cada registro do arquivo.
 
-<hr style="border:2px solid blue">

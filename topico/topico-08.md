@@ -13,7 +13,7 @@
 |6. Registro de tamanho variável|13. <ins>**ORGANIZAÇÃO DE ARQUIVOS SEQUENCIAIS (ORDENADOS)**</ins>|
 |7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. Organização de arquivos _hashing_|
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 13. <ins>ORGANIZAÇÃO DE ARQUIVOS SEQUENCIAIS (ORDENADOS)</ins>
 
