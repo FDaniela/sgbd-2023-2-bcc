@@ -1,16 +1,6 @@
 ## [Tópico 13] - Estruturas de indexação (1/5)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. <ins>**VISÃO GERAL**</ins>|4. Índice secundário|
-|2. Índice primário|5. |
-|3. Índice de agrupamento|6. |
-
-<hr style="border:2px solid blue">
-
 ### 1. <ins>VISÃO GERAL</ins>
 
 Considere a presença de um <ins>**ÍNDICE REMISSIVO**</ins>, para a <ins>busca por assunto</ins> em um livro:<br>
@@ -71,5 +61,3 @@ O acesso aos dados via o arquivo de índice requer que páginas do arquivo de í
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26BE; ... então a busca via um índice esparso é mais rápida do que via um índice denso [para o mesmo arquivo de dados]?
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-32.jpg" width="300">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-33.jpg" width="300">
-
-<hr style="border:2px solid blue">

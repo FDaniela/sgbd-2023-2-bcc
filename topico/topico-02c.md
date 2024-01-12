@@ -1,13 +1,13 @@
 ## [Tópico 02c] - Exercícios de revisão (3/3)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 Para ilustrar as operações da SQL, considere o esquema lógico do BD Empresa.
 
 <img src="../media/fig-esquema-logico-bdempresa.jpg" width="450">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Escreva em SQL as operações (1), (2) e (3).
 
@@ -53,7 +53,7 @@ INNER JOIN SUPER
 ON FUNC.Cpf = SUPER.Cpf;
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Interprete as expressões a seguir (veja a tabela).
 
@@ -71,7 +71,7 @@ ON FUNC.Cpf = SUPER.Cpf;
 
 <img src="../media/fig-valor-nulo.jpg" width="450">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Reescreva a junção abaixo sem usar a cláusula HAVING. Em seguida, transforme a solução em junção natural.
 
@@ -93,7 +93,7 @@ GROUP BY P.Pnome, P.Unome
 HAVING COUNT(F.Cpf) >= 2;
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> A construção abaixo é válida?
 
@@ -108,7 +108,7 @@ HAVING COUNT(F.Cpf) >= 2;
     >4. Filtra os grupos resultantes usando HAVING COUNT(Fcpf) >= 2, o que significa que serão retornados apenas os grupos com pelo menos duas ocorrências.
     >5. Ordena o resultado em ordem decrescente pelo terceiro item (COUNT(Fcpf)) e, em seguida, pelo primeiro item (Pnome).
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual o propósito do comando abaixo?
 
@@ -118,7 +118,7 @@ HAVING COUNT(F.Cpf) >= 2;
 
 > Selecionar o salário de funcionários que têm salários maiores do que o segundo maior salário na tabela FUNCIONARIO, com execeção do menor salário. 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual o propósito dos comandos abaixo?
 
@@ -135,7 +135,7 @@ O comando (2) retorna uma lista que combina dois conjuntos de resultados diferen
 >(3) INTERSECT (Interseção):
 O comando (3) retorna funcionários que supervisionam outros funcionários (indicado pelo JOIN entre FUNCIONARIO e FUNCIONARIO com base na relação de supervisor) e que também são dependentes de outros funcionários (indicado pelo INTERSECT, que retorna os funcionários que estão presentes em ambos os conjuntos de resultados). Em resumo, ele retorna funcionários que são tanto supervisores quanto dependentes.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Os comandos em (1) e (2) são equivalentes?
 
@@ -148,7 +148,7 @@ O comando (3) retorna funcionários que supervisionam outros funcionários (indi
 
 > (2): Também retorna funcionários com pelo menos um dependente, mas é mais eficiente em termos de desempenho.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> A consulta abaixo poderia retornar _tuplas_ iguais?
 
@@ -158,7 +158,7 @@ O comando (3) retorna funcionários que supervisionam outros funcionários (indi
 
 >Sim, a consulta (1) pode retornar tuplas iguais se houver entradas duplicadas na tabela TRABALHA_EM com o mesmo nome e último nome e Horas.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual o propósito do comando abaixo?
 
@@ -168,7 +168,7 @@ O comando (3) retorna funcionários que supervisionam outros funcionários (indi
 
 > Retorna funcionários com o salário mais alto na tabela FUNCIONARIO.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual o propósito do comando abaixo?
 
@@ -178,7 +178,7 @@ O comando (3) retorna funcionários que supervisionam outros funcionários (indi
 
 > Retorna funcionários cujos salários estão entre os três maiores salários distintos na tabela FUNCIONARIO.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Os comandos em (1), (2) e (3) são equivalentes?
 
@@ -191,4 +191,4 @@ O comando (3) retorna funcionários que supervisionam outros funcionários (indi
 > (2): Retorna funcionários cujos salários não estão na lista de salários menores que qualquer salário na tabela FUNCIONARIO.
 > (3): Retorna funcionários cujos salários não estão na lista de salários menores que pelo menos um salário de outros funcionários na tabela FUNCIONARIO, considerando uma subconsulta com aliases (EXTERNA, CENTRAL e INTERNA) para fazer essa comparação.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">

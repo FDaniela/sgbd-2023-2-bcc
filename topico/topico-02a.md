@@ -1,7 +1,7 @@
 ## [Tópico 02a] - Exercícios de revisão (1/3)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 
 #### <ins>EXERCÍCIO:</ins> Um banco de dados simples (**BD Simples**):
@@ -73,4 +73,4 @@ IMPORTANTE:<br>
 > - **(08) Restrição de Integridade Referencial:** Mantém a consistência nas relações entre tabelas, garantindo que os valores em uma coluna que faz referência a outra tabela correspondam a valores válidos na tabela referenciada.
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">

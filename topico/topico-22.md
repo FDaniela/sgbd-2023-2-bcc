@@ -1,16 +1,6 @@
 ## [Tópico 22] - Processamento de Transações
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. <ins>**VISÃO GERAL**</ins>|4.|
-|2.|5.|
-|3.|6.|
-
-<hr style="border:2px solid blue">
-
 ### 1. <ins>VISÃO GERAL</ins>
 
 #### &#10004; <ins>`TRANSAÇÃO DE BD — Conceito`</ins><br>

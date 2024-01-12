@@ -1,15 +1,6 @@
 ## [Tópico 17] - Estruturas de indexação (5/)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|4. <ins>**ÍNDICE SECUNDÁRIO (2/2)**</ins>|
-|2. Índice primário|5. |
-|3. Índice de agrupamento|6. |
-
-<hr style="border:2px solid blue">
 
 ### 4. <ins>ÍNDICE SECUNDÁRIO (2/2)</ins>
 

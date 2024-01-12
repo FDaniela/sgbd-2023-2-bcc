@@ -1,16 +1,6 @@
 ## [Tópico 19] - Estruturas de indexação (7/9)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|4. Índice secundário|
-|2. Índice primário|5. Índice multinível|
-|3. Índice de agrupamento|6. <ins>**ÍNDICE EM ÁRVORE (1/3)**</ins>|
-
-<hr style="border:2px solid blue">
-
 ### 6. <ins>ÍNDICE EM ÁRVORE (1/3)</ins>
 
 As estruturas orientadas por árvore são estudadas e empregadas em muitas das soluções baseadas em software.

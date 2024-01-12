@@ -1,19 +1,6 @@
 ## [Tópico 06] - Estruturas de armazenamento (4/10)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|8. Cabeçalho de arquivo e cabeçalho de bloco|
-|2. Armazenamento físico|9. Alocação de blocos de arquivo no disco|
-|3. Arquivo, bloco e registro|10. <ins>**ACESSO A REGISTROS**</ins>|
-|4. _Buffering_ de blocos|11. <ins>**ORGANIZAÇÃO DE ARQUIVO _vs._ MÉTODO DE ACESSO**</ins>|
-|5. Registro de tamanho fixo|12. Organização de arquivos não ordenados (_heap_)|
-|6. Registro de tamanho variável|13. Organização de arquivos sequenciais|
-|7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. Organização de arquivos _hashing_|
-
-<hr style="border:2px solid red">
 
 ### 10. <ins>ACESSO A REGISTROS</ins>
 

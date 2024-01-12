@@ -1,16 +1,6 @@
 ## [Tópico 23] - Processamento de Transações
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|4. Escalonamento quanto à serialização|
-|2. <ins>**ESCALONAMENTO**</ins>|5.|
-|3. Escalonamento quanto à recuperação|6.|
-
-<hr style="border:2px solid blue">
-
 ### 2. <ins>ESCALONAMENTO</ins>
 
 Relembrando ... transações executadas simultaneamente são aquelas que intersectam-se em seus períodos de execução.

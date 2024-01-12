@@ -1,16 +1,6 @@
 ## [Tópico 18] - Estruturas de indexação (5/)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|4. Índice secundário|
-|2. Índice primário|5. <ins>**ÍNDICE MULTINÍVEL**</ins>|
-|3. Índice de agrupamento|6. |
-
-<hr style="border:2px solid blue">
-
 #### &#x270D;&#9745; <ins>REVISÃO</ins> &#8212; TIPO DE ÍNDICE BASEADO NAS PROPRIEDADES DO CAMPO DE INDEXAÇÃO
 
 ||campo de indexação<br>**&#61;**<br>campo de ordenação <sup>(a)</sup>|campo de indexação<br>**&#8800;**<br>campo de ordenação <sup>(a)</sup>|

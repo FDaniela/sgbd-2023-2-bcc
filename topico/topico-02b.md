@@ -1,13 +1,13 @@
 ## [Tópico 02b] - Exercícios de revisão (2/3)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 Para ilustrar as operações da álgebra relacional, considere o esquema lógico do BD Empresa.
 
 <img src="../media/fig-esquema-logico-bdempresa.jpg" width="450">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual a distinção entre as expressões abaixo?
 
@@ -28,7 +28,7 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 >A principal diferença está na projeção dos resultados na Expressão 2, onde são adicionadas colunas com valores constantes.
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual o retorno da expressão abaixo?
 
@@ -38,7 +38,7 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 
 > Para cada empregado o nome do seu supervisor será dado.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> As afirmações abaixo são verdadeiras?
 
@@ -48,7 +48,7 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 [V] R ∪ (S ∪ T ) = (R ∪ S) ∪ T ?<br>
 [V] (R ∩ S) ∩ T = R ∩ (S ∩ T) ?<br>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual o conteúdo de RESULT1, RESULT2 e RESULT3?
 
@@ -74,13 +74,13 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 > RESULT3: os CPFs dos funcionários do departamento 5 que não são supervisores<br>
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> No contexto das operações UNIÃO, INTERSEÇÃO e DIFERENÇA, para comparar as _tuplas_ presentes nas duas relações de entrada, as _tuplas_ devem ser do mesmo tipo, ou seja, deve haver 'compatibilidade de união' (compatibilidade de tipo). O que significa 'compatibilidade de união'?
 
 > "Compatibilidade de união" significa que as duas relações de entrada devem ter o mesmo número e tipo de colunas para que as operações de união, interseção e diferença possam ser realizadas corretamente.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual o conteúdo de RESULT?
 
@@ -94,7 +94,7 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 
 >  O conteúdo de RESULT será uma tabela que contém os nomes (Pnome e Unome) dos funcionários cujo "Cpf" está na tabela FUNC (resultado da divisão) e que atendem às condições de seleção inicial (primeira operação). O conteúdo exato dependerá dos dados reais nas tabelas e das condições especificadas nas operações.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Que expressão da álgebra relacional implementa as seguintes consultas?
 
@@ -118,7 +118,7 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Uma lista de comandos, categorizados por dificuldade ...
 
@@ -152,4 +152,4 @@ Para ilustrar as operações da álgebra relacional, considere o esquema lógico
 
 > _Under Construction_ ...
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">

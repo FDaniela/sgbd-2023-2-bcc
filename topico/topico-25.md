@@ -1,16 +1,6 @@
 ## [Tópico 25] - Processamento de Transações
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|4. <ins>**ESCALONAMENTO QUANTO À SERIALIZAÇÃO**</ins>|
-|2. Escalonamento|5.|
-|3. Escalonamento quanto à recuperação|6.|
-
-<hr style="border:2px solid blue">
-
 ### 3. <ins>ESCALONAMENTO QUANTO À SERIALIZAÇÃO</ins>
 
 #### RELEMBRANDO ...

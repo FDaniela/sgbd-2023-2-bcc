@@ -1,20 +1,6 @@
 ## [Tópico 07] - Estruturas de armazenamento (5/10)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|8. Cabeçalho de arquivo e cabeçalho de bloco|
-|2. Armazenamento físico|9. Alocação de blocos de arquivo no disco|
-|3. Arquivo, bloco e registro|10. Acesso a registros|
-|4. _Buffering_ de blocos|11. Organização de arquivo _vs._ Método de acesso|
-|5. Registro de tamanho fixo|12. <ins>**ORGANIZAÇÃO DE ARQUIVOS NÃO ORDENADOS (_HEAP_)**</ins>|
-|6. Registro de tamanho variável|13. Organização de arquivos sequenciais|
-|7. Organização de registros em blocos<br>(espalhada e não espalhada)|14. Organização de arquivos _hashing_|
-
-<hr style="border:2px solid red">
-
 ### 12. <ins>ORGANIZAÇÃO DE ARQUIVOS NÃO ORDENADOS (_HEAP_)</ins>
 
 Tipo de organização simples e básico, os registros são dispostos no arquivo na ordem em que foram inseridos:

@@ -1,7 +1,7 @@
 ## [Tópico 02] - Exercícios de revisão (1/2)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qual a distinção entre ?
 1. **Esquema Conceitual, Esquema Lógico e Esquema Físico:**
@@ -47,7 +47,7 @@
   > - **Modelo Relacional:** É um modelo que representa os dados em tabelas relacionadas, onde as tabelas têm colunas (atributos) e linhas (registros). É usado para implementar bancos de dados relacionais e é mais próximo da implementação física.
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Quais as possíveis inconsistências no diagrama abaixo ?
 
@@ -59,7 +59,7 @@
 >4.  Numero de CPF não está com exclusividade.
 >5. Não há muitas informações sobre o que realmente é um local.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Quais as possíveis inconsistências no diagrama abaixo ?
 
@@ -68,7 +68,7 @@
 >1. Inconsistência entre SUBJECTS e LECTURER com Identificações Pessoais para Relacionamento de Um para Um
 >2. A Relação do LECTURER com o COURSE, que é às Vezes Um para Um e Outras Vezes Um para Muitos
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Que esquema conceitual de banco de dados, o MER, pode ser empregado para suportar consultas por quaisquer parentes de determinada pessoa ?
 
@@ -76,13 +76,13 @@
 Pessoa (Pai) <autorrelacionamento> Pessoa (Filho) |
 Pessoa (Mãe) <autorrelacionamento> Pessoa (Filho)
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Por que a <ins>ordenação de _tuplas_</ins> não é relevante no contexto do <ins>modelo relacional</ins> ?
 
 > Uma tupla representa uma linha de uma tabela, isto é, uma instância de uma entidade. As relações, por sua vez, são formadas por um conjunto de tuplas, e, matematicamente falando, os elementos de um conjunto não possuem ordem entre eles. Além disso, o modelo relacional não se preocupa com o armazenamento físico dos dados (onde existe uma ordem de armazenamento na memória), apenas tenta representar os dados de forma lógica e abstrata.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> O que significa <ins>valor nulo</ins> no jargão de banco de dados ? Quais as semelhanças e distinções entre ?
 - Valor nulo e valor ausente.
@@ -100,7 +100,7 @@ Pessoa (Mãe) <autorrelacionamento> Pessoa (Filho)
 >   - **Distinções:** "Valor nulo" é uma representação técnica em bancos de dados, enquanto "informação" refere-se ao conceito mais amplo de dados ou conhecimento.
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> No contexto do modelo relacional, qual a distinção entre os conceitos:
 
@@ -121,7 +121,7 @@ Pessoa (Mãe) <autorrelacionamento> Pessoa (Filho)
 >   - **Número Total de Distintos Valores que um Atributo Pode Ter:** Refere-se ao limite máximo de valores únicos que um atributo pode conter com base em seu domínio e tipo de dados, independentemente dos valores reais presentes nos dados. Isso é determinado pelas propriedades do domínio do atributo.
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> No contexto do modelo relacional, analisar as sentenças:
 >1. **Um banco de dados é tipicamente composto por várias relações:**<br>
@@ -131,7 +131,7 @@ Pessoa (Mãe) <autorrelacionamento> Pessoa (Filho)
 >   A relação entre tabelas em um banco de dados relacional é estabelecida por meio de chaves estrangeiras e chaves primárias. Isso permite que uma tupla em uma tabela se relacione com uma ou mais tuplas em outra tabela.
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> No contexto do modelo relacional, que conceito se refere em ?
 
@@ -151,7 +151,7 @@ Pessoa (Mãe) <autorrelacionamento> Pessoa (Filho)
 >   - É uma lista ordenada de valores, correspondendo aos atributos em uma tupla específica.
 
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### <ins>EXERCÍCIO:</ins> Qualquer relação é um <ins>subconjunto</ins> do <ins>produto cartesiano</ins> entre os <ins>conjuntos de domínios</ins> dos atributos da relação ?
 - Se R(A1, A2, ...,An), então
@@ -159,4 +159,4 @@ Pessoa (Mãe) <autorrelacionamento> Pessoa (Filho)
 
 > Sim, pois o produto cartesiano dos conjuntos de domínios dos atributos é o conjunto de todas as combinações possíveis de valores que podem ser atribuídos a cada atributo. A relação contém apenas um subconjunto dessas combinações, ou seja, apenas as tuplas que realmente existem na relação.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">

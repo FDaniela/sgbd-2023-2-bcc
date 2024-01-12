@@ -1,16 +1,6 @@
 ## [Tópico 24] - Processamento de Transações
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|4. Escalonamento quanto à serialização|
-|2. Escalonamento|5.|
-|3. <ins>**ESCALONAMENTO QUANTO À RECUPERAÇÃO**</ins>|6.|
-
-<hr style="border:2px solid blue">
-
 ### 3. <ins>ESCALONAMENTO QUANTO À RECUPERAÇÃO</ins>
 
 Segundo a propriedade DURABIDADE para transações de banco de dados (ver [Tópico 22](./topico-22.md)):<br>

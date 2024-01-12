@@ -1,16 +1,6 @@
 ## [Tópico 20] - Estruturas de indexação (8/9)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
-### <ins>CONTEÚDO</ins>
-
-|_Item do conteúdo_|_Item do conteúdo_|
-|-|-|
-|1. Visão geral|4. Índice secundário|
-|2. Índice primário|5. Índice multinível|
-|3. Índice de agrupamento|6. <ins>**ÍNDICE EM ÁRVORE (2/3)**</ins>|
-
-<hr style="border:2px solid blue">
-
 ### 6. <ins>ÍNDICE EM ÁRVORE (2/3)</ins>
 
 **`Árvores de Busca`** impõem restrições às estruturas tradicionais em árvore, tal como posto no [Tópico 19](./topico-19.md):<br>
