@@ -106,13 +106,13 @@ Com respeito a `Árvore B` acima:<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-51.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### Exercício
 
 Desenhe passo-a-passo a inserção de uma sequência de entradas &#8212; 8, 5, 1, 7, 3, 12, 9, 6 &#8212; em uma árvore B de ordem p = 3.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x270D;&#x270D; `Breve comentário` sobre <ins>exclusão de dados</ins> em uma <ins>Árvore B de ordem p </ins>:<br>
 &#9745; Se a exclusão de dados ocasionar que um nó fique menos da metade cheio:<br>
@@ -139,7 +139,7 @@ Segundo a bibliografia sugerida para a disciplina:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**(ii)** um ponteito para o nó pai;<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... ambas informações são úteis aos algoritmos que manipulam a árvore.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### Exercício
 
@@ -160,7 +160,7 @@ Determine:
 
 [Uma solução](./topico-20solucao-01.md)
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x270D;&#x270D; `Breve comentário` sobre <ins>Árvore B como organização de arquivos de dados</ins>:<br>
 

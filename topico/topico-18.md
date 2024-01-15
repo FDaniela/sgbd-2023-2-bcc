@@ -10,7 +10,7 @@
 
 <sup>(a)</sup> Ordenação do arquivo de dados.<br>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#x270D;&#9745; <ins>REVISÃO</ins> &#8212; PROPRIEDADES DE TIPOS DE ÍNDICE
 
@@ -29,7 +29,7 @@
 <sup>(f)</sup> Opção 1 no [Tópico 17](./topico-17.md).<br>
 <sup>(g)</sup> Opções 2 e 3 no [Tópico 17](./topico-17.md).<br>
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### 5. <ins>ÍNDICE MULTINÍVEL</ins>
 
@@ -52,7 +52,7 @@ O número de registros do <ins>índice de nível j </ins> (j>1) é o número de 
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-39.jpg" width="400">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício
 

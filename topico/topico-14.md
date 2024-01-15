@@ -1,4 +1,4 @@
-## [Tópico 14] - Estruturas de indexação (2/)
+## [Tópico 14] - Estruturas de indexação (2/5)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 
@@ -74,7 +74,7 @@ Sobre as operações de atualização (inserção, modificação e exclusão) de
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#x26BE; ... se a operação alcançar algum registro âncora de bloco no arquivo de dados ...<br>
 &#x267B; Reorganizações periódicas são requeridas.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício
 

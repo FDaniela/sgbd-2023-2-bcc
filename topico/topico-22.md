@@ -28,13 +28,38 @@ UPDATE CONTA_CORRENTE
 COMMIT;
 go
 ```
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício:<br>
 
 ✍ Pesquisar sobre BEGIN TRANSACTION, COMMIT TRANSACTION, ROLLBACK TRANSACTION, SAVE TRANSACTION.
 
-<hr style="border:2px solid blue">
+```diff
+
++ BEGIN TRANSACTION
++ Descrição: Inicia explicitamente uma nova transação no contexto de um sistema de gerenciamento de banco de dados (SGBD).
++  Função: Marca o início de uma transação, indicando ao SGBD que as operações subsequentes fazem parte da mesma unidade lógica de processamento.
+
+
++ COMMIT TRANSACTION
++ Descrição: Confirma as operações realizadas durante uma transação, tornando as alterações permanentes no banco de dados.
++ Função: Finaliza com êxito uma transação, aplicando as alterações feitas durante a transação ao banco de dados.
+
+
+
++ ROLLBACK TRANSACTION
++ Descrição: Desfaz todas as operações realizadas durante uma transação não confirmada, restaurando o estado do banco de dados para o momento em que a transação foi iniciada.
++ Função: Reverte todas as alterações feitas durante a transação, deixando o banco de dados em um estado consistente, como se a transação nunca tivesse ocorrido.
+
+
++ SAVE TRANSACTION
++ Descrição: Salva um ponto de salvamento (savepoint) dentro de uma transação para permitir pontos específicos de reversão em caso de necessidade.
++ Função: Permite que partes específicas de uma transação sejam desfeitas, sem reverter toda a transação. Pode ser usado em conjunto com ROLLBACK para voltar a um ponto específico da transação.
+
+```
+  
+
+<hr style="border:2px solid red">
 
 #### &#10004; <ins>`TRANSAÇÃO DE BD — Outros exemplos`</ins><br>
 
@@ -198,13 +223,33 @@ Seja a figura abaixo, sobre **processamento intercalado** _versus_ **processamen
 +
 ```
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício:<br>
 ✍ Pesquisar sobre níveis de isolamento entre transações:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;... SERIALIZABLE, REPEATABLE READS, READ COMMITTED, READ UNCOMMITTED.
 
-<hr style="border:2px solid blue">
+```diff
+
++ SERIALIZABLE
++ Descrição: Isola completamente uma transação de outras transações concorrentes, garantindo que a execução simultânea de várias transações não produza resultados inconsistentes.
++ Uso: SET TRANSACTION ISOLATION LEVEL SERIALIZABLE;
+
++ REPEATABLE READ
++ Descrição: Garante que, durante a transação, nenhum outro processo pode modificar os dados lidos pela transação e que qualquer nova leitura dos mesmos dados retornará os mesmos valores.
++ Uso: SET TRANSACTION ISOLATION LEVEL REPEATABLE READ;
+
++ READ COMMITTED
++ Descrição: Permite que uma transação veja apenas os dados que foram confirmados por outras transações. As leituras não são bloqueadas, mas podem resultar em leituras inconsistentes devido a alterações de outras transações em andamento.
++ Uso: SET TRANSACTION ISOLATION LEVEL READ COMMITTED;
+
++ READ UNCOMMITTED
++ Descrição: Permite que uma transação leia dados não confirmados por outras transações, o que pode resultar em leituras sujas ou inconsistentes.
++ Uso: SET TRANSACTION ISOLATION LEVEL READ UNCOMMITTED;
+
+```
+
+<hr style="border:2px solid red">
 
 #### &#10004; <ins>`TRANSAÇÃO DE BD — Propriedades ACID`</ins><br>
 
@@ -239,39 +284,39 @@ Seja a figura abaixo, sobre **processamento intercalado** _versus_ **processamen
 &nbsp;&nbsp;&nbsp;&nbsp;... devem persistir no banco de dados.<br>
 &nbsp;&nbsp;&nbsp;&nbsp;... Essas alterações não devem ser perdidas devido a qualquer falha posterior de outras transações.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 &#9918; **Para refletir &#8756; `ESCALONAMENTO`**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-67.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### &#10004; <ins>`TRANSAÇÃO DE BD — Transições de Estado`</ins><br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-61.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-62.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-63.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-64.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-65.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-66.jpg" width="500">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício:<br>
 
@@ -279,4 +324,40 @@ Seja a figura abaixo, sobre **processamento intercalado** _versus_ **processamen
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... escalonamentos que preservam a <ins>recuperação de transações</ins> ,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;... escalonamentos que preservam a <ins>serialização de transações</ins> .
 
-<hr style="border:2px solid blue">
+
+```diff
+
+--- Escalonamento de transações — ChatGPT
+
+ O escalonamento de transações refere-se à ordem na qual as operações de diferentes transações são executadas em um sistema de gerenciamento de banco de dados (SGBD). Existem dois conceitos importantes relacionados ao escalonamento de transações: escalonamentos que preservam a recuperação de transações e escalonamentos que preservam a serialização de transações.
+
+    1. Escalonamentos que Preservam a Recuperação de Transações
+        - O objetivo principal é garantir a recuperação do sistema em caso de falhas. O escalonamento deve ser tal que, mesmo após uma falha, o sistema possa ser restaurado a um estado consistente.
+        - **Propriedades Desejadas**:
+            - **Preservação de Commit**: Se uma transação T commitou antes de outra transação U iniciar, então U não pode ser commitada antes de T.
+            - **Preservação de Rollback**: Se uma transação T foi revertida (rollback) antes de outra transação U iniciar, então U não pode ser commitada antes de T.
+        - **Garantias**:
+            - Garante que as transações sejam recuperáveis em caso de falha do sistema.
+            - Garante que as transações não sejam confirmadas antes de transações anteriores terem sido confirmadas.
+        - **Exemplo de Conflito**:
+            - T1: A → B → Commit
+            - T2: C → D → Commit
+            - T3: B → E → Commit
+            - Se T3 falhar, o sistema pode ser recuperado de forma consistente.
+            
+    2. Escalonamentos que Preservam a Serialização de Transações
+        - O objetivo é garantir que o resultado da execução do sistema seja equivalente a algum escalonamento serial (sequencial) das transações, mesmo que elas sejam executadas concorrentemente.
+        - **Propriedades Desejadas**:
+            - **Preservação da Ordem de Leitura e Escrita**: Se uma transação T lê o valor de uma transação U e T inicia depois de U, então T deve ler o valor atualizado por U.
+            - **Preservação da Serialização**: A execução do sistema deve ser equivalente à execução serial de suas transações.
+        - **Garantias**:
+            - Garante que o resultado da execução seja consistente com alguma ordem serial possível.
+            - Garante consistência no resultado das leituras e gravações entre as transações.
+        - **Exemplo de Conflito**:
+            - T1: A → B → Commit
+            - T2: C → D → Commit
+            - T3: B → E → Commit
+            - Se T3 ler B após T2 ter escrito B e antes de T2 ter commitado, pode haver inconsistência. O escalonamento deve garantir que isso não aconteça.
+
+
+```

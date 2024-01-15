@@ -80,7 +80,7 @@ O custo da busca está associado ao número de níveis da Árvore B+:<br>
 &#9888; O custo é limitado a **⌈ log<sub>⌈ p∕2 ⌉</sub> N ⌉** blocos acessados,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;N é o número de entradas no índice.
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### Exercício
 
@@ -97,7 +97,7 @@ Sejam: o tamanho do bloco B = 512 bytes, o tamanho do campo de indexação (camp
 
 [Uma solução](./topico-21solucao-01.md)
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 ### Exercício
 

@@ -1,4 +1,4 @@
-## [Tópico 17] - Estruturas de indexação (5/)
+## [Tópico 17] - Estruturas de indexação (5/5)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 
@@ -38,7 +38,7 @@ Opções de implementação:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-38.jpg" width="400">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício
 

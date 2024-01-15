@@ -1,4 +1,4 @@
-## [Tópico 16] - Estruturas de indexação (4/)
+## [Tópico 16] - Estruturas de indexação (4/5)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 ### 4. <ins>ÍNDICE SECUNDÁRIO (1/2)</ins>
@@ -38,7 +38,7 @@ O campo de indexação possui valor único entre os registros de dados:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-37.jpg" width="350">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício
 

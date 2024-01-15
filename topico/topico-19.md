@@ -78,5 +78,3 @@ As estruturas orientadas por árvore são estudadas e empregadas em muitas das s
 &#x26BE; Quando um novo registro é inserido no arquivo:<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... um novo valor do campo de indexação é inserido na árvore,<br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ... bem como um ponteiro para os dados.
-
-<hr style="border:2px solid blue">

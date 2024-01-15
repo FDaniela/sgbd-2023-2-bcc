@@ -85,6 +85,9 @@ Sejam duas transações, T<sub>1</sub> e T<sub>2</sub>, e os escalonamentos S<su
 
 3. Sobre o estado final do banco de dados:
    1. O estado final dos escalonamentos não-seriais coincide com o estado final dos escalonamentos seriais?
-   1. As não-coincidências ocorrem em escalonamentos não seriais em que há interferências indevidas entre as transações?
+      > Não há garantia de que o resultado final seja o mesmo.
+   2. As não-coincidências ocorrem em escalonamentos não seriais em que há interferências indevidas entre as transações?
+      > Sim, as não-coincidências frequentemente ocorrem em escalonamentos não seriais devido a interferências indevidas entre as transações. Conflitos e operações concorrentes podem levar a resultados diferentes.
 
 4. Para qualquer escalonamento não-serial **S** de **n** transações T<sub>1</sub>, T<sub>2</sub>, …, T<sub>n</sub>, se o estado final após a execução de **S** for o mesmo estado final de pelo menos um escalonamento serial dessas transações, é possível afirmar que as coincidências identificadas ocorrerão para qualquer estado inicial de banco de dados?
+   >Não necessariamente. Mesmo que um escalonamento não-serial resulte no mesmo estado final que algum escalonamento serial específico, isso não garante que o mesmo padrão de coincidência ocorrerá para qualquer estado inicial de banco de dados. O resultado pode depender das condições iniciais e das interações específicas entre as transações.

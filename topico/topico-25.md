@@ -115,16 +115,54 @@ Observar abaixo dois escalonamentos, seus grafos de precedência e suas análise
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-75.jpg" width="600">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício
 
 Analise os escalonamentos abaixo quanto à serialização [de conflito].
 
-S1: r1(x); r2(z); r1(x); r3(x); r3(y); w1(x); w3(y); r2(y); w2(z); w2(y)<br>
+S1: r1(x); r2(z); r1(x/z); r3(x); r3(y); w1(x); w3(y); r2(y); w2(z); w2(y)<br>
+
+```diff
+|  Transação T1 | Transação T2 | Transação T3 |
+|:-------------:|:------------:|:------------:|
+|      r(x)     |              |              |
+|               |     r(z)     |              |
+|      r(x)     |              |              |
+|               |              |     r(x)     |
+|               |              |     r(y)     |
+|      w(x)     |              |              |
+|               |              |     w(y)     |
+|               |     r(y)     |              |
+|               |     w(z)     |              |
+|               |     w(y)     |              |
+
+
+
+```
+
+
 S2: r1(x); r2(z); r3(x); r1(z); r2(y); r3(y); w1(x); w2(z); w3(y); w2(y)
 
-<hr style="border:2px solid blue">
+
+```diff
+| Transação T1 | Transação T2 | Transação T3 |
+|:------------:|:------------:|:------------:|
+|     r(x)     |              |              |
+|              |     r(z)     |              |
+|              |              |     r(x)     |
+|     r(z)     |              |              |
+|              |     r(y)     |              |
+|              |              |     r(y)     |
+|     w1(x)    |              |              |
+|              |     w(z)     |              |
+|              |              |     w(y)     |
+|              |     w(y)     |              |
+
+
+```
+
+<hr style="border:2px solid red">
 
 #### Relação entre escalonamentos
 

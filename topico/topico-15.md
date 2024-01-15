@@ -1,4 +1,4 @@
-## [Tópico 15] - Estruturas de indexação (3/)
+## [Tópico 15] - Estruturas de indexação (3/5)
 ###### *by Prof. Plinio Sa Leitao-Junior (INF/UFG)*
 
 
@@ -41,7 +41,7 @@ A figura abaixo ressalta um <ins>índice de agrupamento</ins> (à esq.):<br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img src="../media/arquivo-36.jpg" width="400">
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercício
 
