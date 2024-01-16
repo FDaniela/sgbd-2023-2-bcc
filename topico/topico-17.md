@@ -48,13 +48,39 @@ Seja um arquivo não ordenado com r = 30.000 registros, que estão gravados em u
 
 Seja uma busca por <ins>registros existentes</ins> no arquivo de dados, cujo predicado é **CEP = \<valor\>**. Determine:<br>
 (a) O tamanho de registro **R<sub>i</sub>** do [arquivo de] índice secundário.<br>
+
+>Ri = 9 + 6 = 15 bytes.
+
 (b) O fator de bloco **bfr<sub>i</sub>** do índice secundário.<br>
+
+> bfri = ⎣(B / Ri)⎦ = ⎣(512 / 15)⎦ = 34 entradas (registros) por bloco.
+
 (c) Número de registros **r<sub>i</sub>** do índice secundário.<br>
+
+> ri = 1000 registros (número de distintos valores do campo de indexação).
+
 (d) Número de blocos **b<sub>i</sub>** do índice secundário.<br>
+
+> bi = ⎡(ri / bfri)⎤ = ⎡(1000 / 34)⎤ = 30 blocos.
+
 (e) Núméro médio de registros **r<sub>k</sub>** por valor do campo de indexação do índice secundário.<br>
+
+> rk = r / 1000 = 30000 / 1000 = 30 registros.
+
 (f) Número de bytes **n<sub>ind</sub>** no nível de indireção para cada valor do campo de indexação do índice secundário.<br>
+
+> nind = Pr * rk = 7 * 30 = 210 bytes.
+
 (g) Número de blocos **b<sub>ind</sub>** no nível de indireção do índice secundário.<br>
+
+> bind = 1000 * ⎡(nind / B)⎤ = 1000 * ⎡(210 / 512)⎤ = 1000 blocos.
+
 (h) Número de blocos do [arquivo de] índice secundário.<br>
+
+> bi + bind = 30 + 1000 = 1030 blocos.
+
 (i) Custo **c<sub>i</sub>** da busca via o índice secundário, no pior caso.<br>
+
+> ci = ⎡(log2 bi)⎤ + 1 + 30 = ⎡(log2 30)⎤ + 1 + 30 = 36 blocos.
 
 [Uma solução](./topico-17solucao-01.md)

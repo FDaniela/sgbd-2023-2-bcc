@@ -48,14 +48,42 @@ O campo de indexação possui valor único entre os registros de dados:
 Considere uma busca por um <ins>registro existente</ins> no arquivo de dados, cujo predicado é **K = \<valor\>**. Determine:<br>
 
 (a) O custo médio **c** da busca no arquivo de dados (busca linear).<br>
+
+>c = 7500 / 2 = 3750 blocos acessados.
+
 (b) O comprimento **R<sub>i</sub>** do registro do arquivo de índice secundário.<br>
+
+> Ri = 9 + 6 = 15 bytes.
+
 (c) O fator de bloco **bfr<sub>i</sub>** do arquivo de índice secundário.<br>
+
+> bfri = ⎣(B/Ri)⎦ = ⎣(4096/15)⎦ = 273 entradas (registros) por bloco.
+
 (d) O número total de entradas (registros) **r<sub>i</sub>** no arquivo de índice secundário.<br>
+
+> ri = 300.000 registros (índice denso).
+
 (e) O número de blocos **b<sub>i</sub>** do arquivo de índice secundário.<br>
+
+> bi = ⎡(ri/bfri)⎤ = ⎡(300000/273)⎤ = 1099 blocos.
+
 (f) O custo **c<sub>i</sub>** da busca binária no arquivo de índice secundário.<br>
+
+>  ci = ⎡(log2 bi)⎤ = ⎡(log21099)⎤ = 11 blocos acessados.
+
 (g) O custo **c<sub>dados</sub>** para localizar o registro de dados, via busca binária no arquivo de índice secundário.<br>
+
+> cdados = ci + 1 = 11 + 1 = 12 blocos acessados.
+
 (h) Compare o custo da busca via o índice secundário com:<br>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_(i)_ busca linear no arquivo de dados; e<br>
+
+> 3750 blocos acessados.
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;_(ii)_ busca via o arquivo de índice primário (ver [Tópico 14](./topico-14.md)).
+
+> 6 (5+1) blocos acessados
+>> (o arquivo de índice primário possui 28 blocos).
 
 [Uma solução](./topico-16solucao-01.md)

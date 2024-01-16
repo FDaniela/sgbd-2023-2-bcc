@@ -91,9 +91,26 @@ Sejam: o tamanho do bloco B = 512 bytes, o tamanho do campo de indexação (camp
 
 (a) Calcule a ordem **p** para os nós internos.
 
+```
+(p*P)+((p-1)*V)<=B
+(p*6)+((p-1)*9)<=512
+15p<=521
+p=34
+```
+
 (b) Calcule a ordem **p<sub>folha</sub>** para os nós folhas.
 
+```
+(p_folha*(Pr + V) + P) <= B
+(p_folha*(7+9) + 6) <= 512
+p_folha= 31
+```
+
 (c) Podemos considerar informações adicionais para cada nó? Por exemplo, tipo de nó (interno ou folha), número de entradas atuais **q** no nó, ponteiros para os nós pai e irmãos imediatos, etc. A presença dessas informações podem impactar nos cálculos acima &#8212; (a) e (b) ?
+
+```
+
+```
 
 [Uma solução](./topico-21solucao-01.md)
 
@@ -105,8 +122,21 @@ Assuma que, em média, cada nó da árvore acima está 69% cheio.
 
 (d) Determine o <ins>número de entradas</ins> nos nós internos e nos nós folhas (nível 3). 
 
+```
+nos internos = 34*0,69 =>22
+nos folhoas = 0,69*p_folha =>21
+```
+
 (e) O número total de entradas do índice na Árvore B+ até o nível 3 (nível folha).
 
+```
+
+```
+
 (f) É correto afirmar que a Árvore B tende a acomodar menos número de chaves, para um determinado número de níveis de índice, em relação a Árvore B+? Justifique.
+
+```
+
+```
 
 [Uma solução](./topico-21solucao-02.md)

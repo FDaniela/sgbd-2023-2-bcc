@@ -62,9 +62,24 @@ Seja o índice secundário do exercício presente no [Tópico 16](./topico-16.md
 
 Se o índice secundário for convertido para um índice multinível (o índice secundário seria índice de **1<sup>o</sup>** nível), determine:<br>
 (a) O número de blocos de índice de **2<sup>o</sup>** nível.<br>
+
+> Sejam bfri1 = bfri e bi1 = bi, então:
+>>      bi2 = ⎡(bi1 / bfri1)⎤ = ⎡(1099 / 273)⎤ = 5 blocos.
+
 (b) O número de blocos de índice de **3<sup>o</sup>** nível.<br>
+
+> bi3 = ⎡(bi2 / bfri2)⎤ = ⎡(5 / 273)⎤ = 1 bloco.
+
 (c) A número de níveis **t** para o índice multinível.<br>
+
+>  t = 3 níveis, pois o índice de 3o nível possui 01 (um) bloco.
+
 (d) O custo **c<sub>dados</sub>** para acessar um registro de dados via o índice multinível.<br>
+
+> cdados = t + 1 = 4 blocos acessados.
+
 (e) Compare com o custo de acesso ao registro de dados via o índice de único nível.
+
+> 04 blocos acessados versus 12 blocos acessados (⎡(log21099)⎤ + 1).
 
 [Uma solução](./topico-18solucao-01.md)

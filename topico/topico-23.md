@@ -69,7 +69,7 @@ Um aspecto teórico ... qualquer escalonamento **S** de **n** transações T<sub
 &#10004; ... para quaisquer duas operações conflitantes, uma delas deverá ocorrer [explicitamente] antes da outra em S.
 -->
 
-<hr style="border:2px solid blue">
+<hr style="border:2px solid red">
 
 #### Exercícios
 

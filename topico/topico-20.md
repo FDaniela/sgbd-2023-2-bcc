@@ -155,8 +155,41 @@ Suponha um índice baseado em Árvore B:<br>
 Determine:
 
 (a) A </ins>ordem **p**</ins> da árvore.<br>
+
+```
+Se cada nó da árvore B pode ter, no máximo,
+            ... p ponteiros de árvore,
+            ... p — 1 ponteiros de dados, e
+            ... p — 1 valores (entradas) de campo-chave de pesquisa,
+      então:
+      ((p-1) * 7) + ((p-1) * 10) + (p * 6) ⋜ B
+      7p - 7 + 10p - 10 + 6p ⋜ 512
+      23p - 17 ⋜ 512
+      p = piso (529 / 23) ∴ p = 23
+```
 (b) O <ins>número de entradas</ins> e <ins>número de ponteiros de árvore</ins> em cada nó, em média, segundo a suposição **69% cheio** para os nós da árvore.<br>
+
+```
+Número de ponteiros de árvore (q):
+       q = teto(p * 0.69) = teto(23 * 0.69) = teto(15,87) = 16 ponteiros por nó.
+Número de entradas (q — 1):
+      q — 1 = 16 — 1 = 15 entradas por nó.
+```
+
 (c) O número total de entradas na árvore até o nível 3.
+
+```
+| Nível |  Nós | Número de entradas | Número de ponteiros de árvore |  Número de entradas até o nível |
+|:-----:|:----:|:------------------:|:-----------------------------:|:-------------------------------:|
+| 0     | 1    | 15                 | 16                            | 15                              |
+| 1     | 16   | 16 * 15 = 240      | 16 * 16 = 256                 | 15 + 240 = 255                  |
+| 2     | 256  | 256 * 15 = 3840    | 256 * 16 = 4096               | 15 + 240 + 3840 = 4095          |
+| 3     | 4096 | 4096 * 15 = 61.440 | 4096 * 16 = 65536             | 15 + 240 + 3840 + 61440 = 65535 |
+
+O número entradas na árvore até o nível 3 é:
+15 + 240 + 3840 + 61440 = 65535 entradas do índice.
+
+```
 
 [Uma solução](./topico-20solucao-01.md)
 
