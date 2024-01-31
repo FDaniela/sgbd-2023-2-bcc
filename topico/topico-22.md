@@ -171,8 +171,10 @@ Seja a figura abaixo, sobre **processamento intercalado** _versus_ **processamen
 
 ```diff
 @@ Se duas ou mais transações, @@
++
 + que acessam os mesmos itens do banco de dados,
 + são executadas SIMULTANEAMENTE de forma NÃO-SERIAL:
++
 -
 - PROBLEMAS PODEM OCORRER,
 - DEVIDO A INTERFERÊNCIAS DESSAS TRANSAÇÕES ENTRE SI.

@@ -109,6 +109,7 @@ p_folha= 31
 (c) Podemos considerar informações adicionais para cada nó? Por exemplo, tipo de nó (interno ou folha), número de entradas atuais **q** no nó, ponteiros para os nós pai e irmãos imediatos, etc. A presença dessas informações podem impactar nos cálculos acima &#8212; (a) e (b) ?
 
 ```
+Podemos precisar de informações adicionais em cada nó (por exemplo, o tipo de nó folha/interno). Desse modo, nos cálculos acima devemos reduzir o tamanho de bloco pela quantidade de espaço para essa(s) informações adicionais. 
 
 ```
 
@@ -130,13 +131,18 @@ nos folhoas = 0,69*p_folha =>21
 (e) O número total de entradas do índice na Árvore B+ até o nível 3 (nível folha).
 
 ```
-
+| Nível |  Nós  | Número de entradas | Número de ponteiros de árvore |
+|:-----:|:-----:|:------------------:|:-----------------------------:|
+| 0     | 1     | 22                 | 23                            |
+| 1     | 23    | 23 * 22 = 506      | 23 * 23 = 529                 |
+| 2     | 529   | 506 * 23 = 11638   | 256 * 23 = 12167              |
+| 3     | 12167 | 11638              | 12167*23=279841               |
 ```
 
 (f) É correto afirmar que a Árvore B tende a acomodar menos número de chaves, para um determinado número de níveis de índice, em relação a Árvore B+? Justifique.
 
 ```
-
+Sim, é correto afirmar devido a quantidade ponteiros de registro possíveis. 
 ```
 
 [Uma solução](./topico-21solucao-02.md)
